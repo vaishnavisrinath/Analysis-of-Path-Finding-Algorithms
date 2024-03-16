@@ -107,7 +107,7 @@ def generate_star_graph(num_nodes):
 
 
 # Measure the execution time of each algorithm for different input sizes
-input_sizes =  [1000000, 3000000, 5000000, 7000000]
+input_sizes =  [20000,50000,80000]
 dijkstra_times = []
 astar_times = []
 bfs_times = []
@@ -135,6 +135,15 @@ for size in input_sizes:
     dfs(star_graph, 0, size - 1)
     dfs_time = time.time() - start_time
     dfs_times.append(dfs_time)
+
+for i in range(len(input_sizes)):
+    print(f"Input Size: {input_sizes[i]}")
+    print(f"Dijkstra's Algorithm: {dijkstra_times[i]} seconds")
+    print(f"A* Search: {astar_times[i]} seconds")
+    print(f"Breadth-First Search: {bfs_times[i]} seconds")
+    print(f"Depth-First Search: {dfs_times[i]} seconds")
+    print()
+
 
 # Plot the results
 plt.figure(figsize=(12, 6))
