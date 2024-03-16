@@ -99,7 +99,7 @@ def generate_circular_graph(num_nodes):
 
     for i in range(num_nodes):
         graph[i][(i + 1) % num_nodes] = random.randint(1, 10)
-        graph[(i + 1) % num_nodes][i] = random.randint(1, 10)
+        graph[(i - 1) % num_nodes][i] = random.randint(1, 10)
 
     return graph
 
