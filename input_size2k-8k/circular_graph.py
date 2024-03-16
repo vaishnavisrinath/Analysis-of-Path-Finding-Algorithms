@@ -104,7 +104,7 @@ def generate_circular_graph(num_nodes):
     return graph
 
 # Measure the execution time of each algorithm for different input sizes
-input_sizes = [1000000, 3000000, 5000000, 7000000]
+input_sizes = [20000,50000,80000]
 dijkstra_times = []
 astar_times = []
 bfs_times = []
